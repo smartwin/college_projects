@@ -1,0 +1,340 @@
+// Assignment 5: Physics Calculator
+// This program will use multiple functions and a menu to allow
+// the user to select a calculation related to physics equations
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+
+using namespace std;
+
+//Displays the type of physics problems that will be offered to the user
+int displayMenu(int menu);
+
+//Gets the value of each varaible in an equation 
+double getOneNumber(double num1);
+
+//Calculates the speed with values provided by the user
+double Speed(double velocity, double time);
+
+//Calculates the distance with values provided by the user
+double Distance(double time);
+
+//Calculates the Bar Volume with values provided by the user
+double BarVolume(double length, double width, double height);
+
+//Calculates the Sphere Volume with values provided by the user
+double SphereVolume(double radius);
+
+//Calculates the Cylinder Volumes with values provided by the user
+double CylinderVolume(double radius, double height);
+
+
+int main()
+{
+   //User Documentation
+   cout << "Welcome to the Physics Calculator. This program will give"
+        << "you a menu of the types of physics equations it is able to calculate. \n"
+        << "After choosing a type of equation, it will prompt you to choose a value"
+        << "for each of the variables in the eaquation. \n After, it will print the"
+        << "calculated answer."; 
+  
+   //Calculations
+   double velocity,
+          length,
+          time,
+          height,
+          width,
+          radius;
+   int menu; 
+   
+   //Call to menu function
+   int option = displayMenu(menu);
+   
+   //Loop to call physic equation functions
+   while(option != 6)
+   {
+      switch(option)
+      {
+         case 1:
+         {
+            //Call to speed function
+            double speed = Speed(velocity, time);
+            
+            //Output calculation to user
+            cout << "Your speed is " << speed << " m/s. \n";
+            
+            //Send User back to menu
+            option = displayMenu(menu);
+            break;
+         }
+         
+         case 2:
+         {
+            //Call to the distance function
+            double distance = Distance(time);
+            
+            //Output calculation to user
+            cout << "Your distance is " << distance << " m \n";
+            
+            //Send user back to physics menu
+            option = displayMenu(menu);
+            break;
+         }
+         
+         case 3:
+         {
+            //Call to Bar Volume function 
+            double barVolume = BarVolume(width, length, height);
+            
+            //Output calculation to user
+            cout << " Your bar volume is " << barVolume << " meters cubed. \n";
+            
+            //Send user back to physics equation menu
+            option = displayMenu(menu);
+            break;
+         }
+         
+         case 4:
+         {
+            //Call to Sphere Volume
+            double sphereVolume = SphereVolume(radius);
+            
+            //Output calculation to user
+            cout << "Your sphere volume is " << sphereVolume << " meters cubed. \n";
+            
+            //Send user back to physics equation menu
+            option = displayMenu(menu);
+            break;
+         }
+         
+         case 5:
+         {  
+            //Call to Cylinder Volume
+            double cylinderVolume = CylinderVolume(radius, height);
+            
+            //Output to calculation answer to user
+            cout << "Your cylinder volume is " << cylinderVolume << " meters cubed. \n";
+            
+            //Send user back to physics menu
+            option = displayMenu(menu);
+            break;
+         }
+         
+         
+         
+     }
+   }
+   
+   //Displays and ends program if user chooses 6 when displayed the menu
+   cout << "You have chosen to quit the program.";
+}
+
+//This function will display the different types 
+//of physics equations to the user can use in the 
+//form of an menu. It will then return the user's
+//response to the main program
+int displayMenu(int menu)
+{
+   //Constants 
+   const int SPEED = 1,
+             DISTANCE = 2, 
+             BAR_VOLUME = 3, 
+             SPHERE_VOLUME = 4,
+             CYLINDER_VOLUME = 5,
+             QUIT = 6;
+             
+   //Display of Physics Menu 
+    cout << "\t\t Physics Equations Types \n\n"
+        << "1: Speed\n"
+        << "2: Distance\n"
+        << "3: Bar Volume\n"
+        << "4: Sphere Volume\n"
+        << "5: Cylinder Volume\n"
+        << "6: To Quit Program\n\n"
+        << "Enter your choice: ";
+    cin  >> menu;
+   
+    //Input Validation  
+    while (menu > 6 && menu == 0)
+    { 
+     
+      cout << "You have chosen an invalid number. Please choose another number: \n\n";
+      cout << "\t\t Physics Equations Types \n\n"
+        << "1: Speed\n"
+        << "2: Distance\n"
+        << "3: Bar Volume\n"
+        << "4: Sphere Volume\n"
+        << "5: Cylinder Volume\n"
+        << "6: To Quit Program\n\n"
+        << "Enter your choice: ";
+      cin  >> menu;
+     }
+  
+  //Returns User's chosen menu option back to the main program     
+  return menu;
+}
+
+//This program will prompt the user to enter a value
+//for a specific variable in their chosen physics problem.
+//It will return that value to the function of the physics
+//problem that called it.
+double getOneNumber(double num1)
+{
+   //Prompts user to enter a number
+   cout << "Please enter a number greater than 0 \n";
+   cin >> num1;
+   
+   //Input Validation
+   if(num1 < 0)
+   {
+      cout << "That number is not greater than 0. Please enter a new number. \n";
+      cin >> num1;
+   }
+    
+    //Returns value to physics equation function that called it
+    return num1;
+}
+
+//This function will calculate the speed for
+//the user. It will prompt the user to enter
+//in two values. It will use the two values
+//entered to calculate the speed. It will
+//return the value to the main program
+double Speed(double velocity, double time)
+{
+   //Declarations 
+   double num1;                //To be used when the getOneNumber function is called
+   const double A = 9.81;      //Constant variable for gravity 
+   
+   //User Documentation
+   cout << "You have chosen the Speed option, you will be asked to enter in"
+        << " two values. \n The first value will be the velocity and the second"
+        << " value will be for the time. \n\n";
+   
+   //Obtain value of velocity from user
+   cout << "The first number you will be entering will be for the velocity. \n";
+   velocity = getOneNumber(num1);
+   
+   //Obtain value of time from user
+   cout << "The second number you will be entering will be for time. \n";
+   time = getOneNumber(num1);
+   
+   //Calculate the speed
+   double speed = velocity + (A * time);
+   
+   //Return value of the speed to the main program 
+   return speed;
+}
+
+//This function will calculate the distance
+//for the user. It will prompt the user to 
+//enter in one value. The value entered will
+//then be used to calculate the distance. The
+//value calculated will be returned to the main
+//function
+double Distance(double time)
+{
+   //Declarations 
+   double num1;               //To be used when the getOneNumber function is called
+   const double A = 9.81;     //constant variable for gravity
+   
+   //User Documentation
+   cout << "You have chosen the Distance option. \n\n";
+   
+   //Obtain the value of time from the user
+   cout << "For this equation you will be entering in a value for time. \n";
+   time = getOneNumber(num1);
+   
+
+   //Calculations   
+   double time_square = pow(time, 2);           //To square time, so it can be calculated with distance
+   double distance = (A * time_square) / 2;     //Calcuate the distance for the user
+   
+   //Return the value to the main program
+   return distance;
+}
+
+//This program will calculate the Bar Voluem for the user
+//It will prompt the user to enter three values. It will
+//then take those values to calculate the Bar Volume. The
+// value will then be return to the main function
+double BarVolume(double length, double width, double height)
+{     
+   double num1;              //To be used when the getOneNumber function is called
+   
+   //User Documetation
+   cout << "You have chosen the Bar Volume option.\nYou will be asked"
+        << " to enter three valeus (in this order): length, width, and height.\n\n";
+   
+   //Obtain the value of the length of the bar
+   cout << "The first value you will be entering will be for the length. \n";
+   length = getOneNumber(num1); 
+   
+   //Obtain the value of the width of the bar
+   cout << "The second value you will be entering will be for the width. \n";
+   width = getOneNumber(num1);
+   
+   //Obtain the value of the height of the bar
+   cout << "The third value you will be entering will be for the height. \n";
+   height = getOneNumber(num1);
+   
+   //Calculation
+   double volume = length * width * height;
+   
+   //Returns the value to the main function
+   return volume;
+}
+
+//This program will calculate the Sphere Volume for the
+//user. It will prompt the user for one value. It will
+//then use that value to calculate the Sphere Volume. 
+//It will return that value to the main function.
+double SphereVolume(double radius)
+{
+   double num1;         //To use when calling the getOneNumber function 
+   
+   //User Documentation
+   cout << "You have chosen the Sphere Volume option. \n\n";
+   
+   //Obtain a value for the radius from the user
+   cout << "The only value that will be used for this equation is the radius. \n";
+   radius = getOneNumber(num1);
+   
+   //Calculations 
+   double radius_cube = pow(radius,3);             //Cube the radius to be used in the volume calculation
+   double volume = (4 * M_PI * radius_cube)/3;     //Calculation of the Sphere Volume
+   
+   //Returns the value of the variable to the main function
+   return volume;
+}
+
+
+//This function will calculate the Cylinder Volume for the user.
+//It will ask the user for two values. It will then use those values
+//to calculate the Sphere Volume. That value of the sphere volume
+//will be returned to the main function
+double CylinderVolume(double radius, double height)
+{
+   double num1;       //To be used when calling the getOneNumber function
+   
+   //User Documentation
+   cout << "You have Cylinder Volume.\n You will be asked to enter a"
+        << " value for the radius and height.\n\n";
+   
+   //Obtain the value of the radius
+   cout << "The first value you will be inputing is for the radius. \n";
+   radius = getOneNumber(num1);
+   
+   //Obtain the value of the height
+   cout << "The second value you will be inputing is for the height. \n";
+   height = getOneNumber(num1);
+   
+   //Calcuations
+   double volume = M_PI * pow(radius,2) * height;
+   
+   //Returns the value of the volume to the main function 
+   return volume;
+}
