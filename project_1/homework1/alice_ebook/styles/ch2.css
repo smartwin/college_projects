@@ -1,0 +1,15 @@
+.speech{
+	text-align: center;
+}
+
+#text_wrap{
+	float: left;
+	margin-right: 25px;
+	padding: 5px;
+}
+
+section p{
+	clear: right;
+}
+
+

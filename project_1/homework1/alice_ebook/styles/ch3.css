@@ -1,0 +1,10 @@
+#floater{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+
+.riddle{
+    margin-right: 30%;
+}

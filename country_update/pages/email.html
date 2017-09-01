@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Montreal | A Year Around Vacation</title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Learn about the four most interesting attractions to see in Montreal, Quebec, Canada">
+    <meta name="keywords" content="Montreal, Canada, Underground City, Montreal Botanical Garden, La Village, Mile End, Quebec">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto|Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/email.css">
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><img src="../image/flag.png" alt="Picture of Official Montreal Flag" width="350px"></li>
+            <li class="centered">
+                <h1>Montreal, Quebec, Canada</h1>
+                <h2><q>The City of Mary</q></h2> </li>
+            <li><img src="../image/arms.jpg" alt="Picture of the Montreal Coat of Arms"  width="200px"></li>
+        </ul>
+    </header>
+	  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+  	<ul>
+		<li><a href="../pages/index.html">Home</a></li>
+    	<li><a href="../pages/videos.html" >Videos</a></li>
+    	<li><a href="../pages/email.html" class="current">Make a Reservation</a></li>
+	</ul>
+  </nav>
+
+	<form name="reservation" action="../php/sendmail.php" method="post">
+                <div>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <p>
+                        <label for="FirstName">First Name:</label>
+                        <input type="text" name="FirstName" required>
+                    </p>
+                    <p>
+                        <label for="LastName">Last Name:</label>
+                        <input type="text" name="LastName" required>
+                    </p>
+                     <p>
+                        
+                        <label for="AgeRange">Age:</label>
+                        <select name="AgeRange">
+                            <option value="">--Select--</option>
+                            <option value="18under">Under 18</option>
+                            <option value="18-25">18 - 25</option>
+                            <option value="26-35">26 - 35</option>
+                            <option value="36-45">36 - 45</option>
+                            <option value="46-55">46 - 55</option>
+                            <option value="56up">56 and older</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="Email">Email Address:</label>
+                        <input type="email" name="Email" required>
+                    </p>
+                    <p>
+                        <label for="Phone">Mobile Phone Number:</label>
+                        <input type="tel" name="Phone">
+                    </p>
+                  
+                    <p>
+                        Do you live in Montreal?<br>
+                        <input type="radio" name="Location" value="yes">Yes<br>
+                        <input type="radio" name="Location" value="no"> No
+                    </p>
+                    <p>
+                        If you live in the USA:
+                        <label for="City">City:</label>
+                        <input type="text" name="City">
+                        <label for="State">State:</label>
+                        <select name="State">
+                            <option value="">--Select--</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="UT">Utah</option>
+                            <option value="WA">Washington</option>
+                            <option value="Other">Other</option>
+                        </select>
+            
+                    
+                    </p>
+					 <p>
+                        If no, where do you live?<br>
+                        <input type="radio" name="Country" value="Canada">Another City in Canada<br>
+						 <input type="radio" name="Country" value="USA">United States of America<br>
+                        <input type="radio" name="Country" value="no"> France<br>
+						 <input type="radio" name="Country" value="other">Other<br>
+						 <label for="Country">Name of Country:</label>
+                        <input type="text" name="Country" placeholder="Please enter name of Country if clicked other.">
+                    </p>
+					
+                </fieldset>
+                </div>
+                <div>
+                   <fieldset>
+                    <legend>Reservation</legend>
+                       <p> 
+                           <label for="ReservationDate">Reservation Date:</label>
+                           <input type="date" name="ReservationDate">
+                           <label for="NumberOfGuests">Number Of Guests:</label>
+                           <input type="number" name="NumberOfGuests" max="22" min="1">
+                       </p>
+                       <p> 
+                           <label for="Comments">Comments:</label>
+                           <textarea name="Comments" placeholder="Any questions or comments?"></textarea>
+                       </p>
+                      
+                     
+                         <p>
+                             <input type="reset" value="Start Over">
+                        <input type="Submit" value="Reserve Now!">
+							 
+                    </p>
+
+                </fieldset>
+                    </div>
+            </form>
+
+    <footer>
+        <p>&copy; 2016 | <a href="mailto:myia.dickens@gmail.com">Myia Dickens</a> | Project 3: Favorite City (New and Imporved) | Long Beach City College | COSW 10</p>
+    </footer>

@@ -1,0 +1,63 @@
+
+
+section img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section p{
+	clear: left;
+}
+
+#orange{
+	color:orange;
+}
+
+.down{
+		
+	color: #8590B7;
+	text-align: center;
+}
+
+.down2{
+	font-size: 150%;
+	font-stretch: expanded;
+	color: #8590B7;
+	text-align: center;
+}
+
+.down3{
+	font-size: 200%;
+	font-stretch: ultra-expanded;
+	color: #8590B7;
+	text-align: center;
+}
+
+#thump{
+	font-size: 150%;
+	font-stretch: expanded;
+	color: #8590B7;
+	text-align: center;
+}
+
+#gold{
+	color: gold;
+}
+
+
+#short{
+	font-size: 80%;
+	font-stretch: condensed;
+}
+
+#fancy{
+	font-family: "Lobster", "Palatino", cursive, serif;
+	font-size: 120%;
+	font-stretch: semi-expanded;
+}
+
+#floater{
+	float: right;
+	margin-left: 10px;
+}

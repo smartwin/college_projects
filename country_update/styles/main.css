@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+section p {
+    text-indent: 20px;
+}
+
+
+/* Styles for elements in the header. */
+
+header {
+    margin-left: 15%;
+	
+}
+
+header ul {
+    vertical-align: middle;
+    list-style: none;
+	
+}
+
+header li {
+    float: left;
+}
+
+.centered {
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: 'Dosis', sans-serif;
+}
+
+.centered h1 {
+    font-size: 400%;
+    text-align: center;
+}
+
+.centered h2 {
+    font-size: 300%;
+    text-align: center;
+}
+
+/*Styles for the Navigation Bar*/
+#nav_menu {
+	clear: left;
+	border-bottom: 6px solid #4D2B1F;
+    background-color: #709ab1;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+	
+	
+}
+#nav_menu ul li {
+	float: left;
+	margin-left: 18%;
+
+}
+
+
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 160px;
+	padding: .7em 0;
+	text-decoration: none;
+
+	color: black;
+}
+#nav_menu ul li a.current {
+	font-weight: bold;
+	color: #e65017;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: #4D2B1F;
+	color: white;
+}
+
+/* Styles for elements in the City Description section and the body headers */
+
+#city {
+    clear: both;
+    width: 95%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#city p::first-letter {
+    font-size: 175%;
+    font-family: 'Lobster', cursive;
+}
+
+
+
+#city p{
+     font-size: 120%;
+    margin-bottom: 2%;
+
+}
+
+#city h4{
+    margin-bottom: 2%;
+}
+
+.image{
+    margin-bottom: 5%;
+}
+
+#map{
+    display: block;
+    float: left;
+    border: 2px solid #4d2b1f;
+    border-radius: 5px;
+    width: 50%;
+
+  
+}
+
+#night{
+    display: block;
+    float: right;
+    border-radius: 5px;
+    width: 48%;
+}
+
+
+
+.head_font {
+    font-family: 'Lobster', cursive;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 250%;
+    text-align: center;
+}
+
+h5{
+    font-family: 'Lobster', cursive;
+    font-size: 200%;
+    text-align: center;
+}
+
+#section_head {
+    margin-top: 20%;
+    margin-bottom: 5%;
+    clear: both;
+}
+
+
+
+/*Styles for the main section*/
+
+.heading {
+    font-family: 'Dosis', sans-serif;
+    font-size: 150%;
+}
+
+main {
+    margin-left: 10%;
+}
+
+
+/*Styles for the main section's photos*/
+
+.attraction {
+    border-radius: 50%;
+    width: 500px;
+}
+
+#garden {
+    height: 450px;
+}
+
+
+/*Styles for the "vanishing 4 pictures"*/
+
+.illusion {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.ill_image,
+.caption {
+    transition: opacity 0.8s ease-in-out;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    padding: 2%;
+}
+
+.illusion:hover .ill_image {
+    opacity: 0;
+}
+
+.illusion:hover .caption {
+    opacity: 1;
+}
+
+
+/*Styles for each attractions description*/
+
+#winter {
+    border: 2px solid #709ab1;
+    border-radius: 10px;
+}
+
+#winter_head {
+    color: #709ab1;
+}
+
+#winter_link {
+    color: #709ab1;
+    text-decoration: none;
+}
+
+#summer {
+    border: 2px solid #e65017;
+    border-radius: 10px;
+}
+
+#summer_head {
+    color: #e65017;
+}
+
+#summer_link {
+    color: #e65017;
+    text-decoration: none;
+}
+
+#spring {
+    border: 2px solid #5fab17;
+    border-radius: 10px;
+}
+
+#spring_head {
+    color: #5fab17;
+}
+
+#spring_link {
+    color: #5fab17;
+    text-decoration: none;
+}
+
+#fall {
+    border: 2px solid #b3000b;
+    border-radius: 10px;
+}
+
+#fall_head {
+    color: #b3000b;
+}
+
+#fall_link {
+    color: #b3000b;
+    text-decoration: none;
+}
+
+
+/*Styles for gallery at the bottom of page*/
+
+#gallery {
+    clear: both;
+}
+
+div.polaroid {
+    width: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: block;
+    float: left;
+}
+
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+/*Styles for foooter*/
+
+table, th, td{
+	 border: 2px solid #4d2b1f;
+	margin-left: 40%;
+	margin-bottom: 2%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}

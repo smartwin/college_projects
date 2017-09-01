@@ -1,0 +1,108 @@
+body{
+	width: 100%;	
+	background-color: black;
+	color: #ffffff;
+}
+
+#change{
+    float: left;
+    text-decoration:none; 
+    font-size: 90%;
+    font-family: "Lobster", "Palatino", cursive, serif;
+    color: #E56782;
+}
+
+p{
+	font-family: 'Raleway', sans-serif;
+	text-indent: 25px;
+	
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#first::first-letter{
+	font-family: "Lobster", "Palatino", cursive, serif;
+	color: #E59A90;
+	font-size: 200%;
+}
+
+h1{
+	font-family: "Lobster", "Palatino", cursive, serif;
+	font-size: 450%;
+	text-align: center;
+	margin: 0;
+}
+
+nav{
+	float: right;  
+	width: 15%;
+	right: 0;
+
+	margin-top: 50px;
+	margin-right: 0px;
+	
+	
+	font-family: "Lobster", "Palatino", cursive, serif;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav li{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #E56782;
+}
+
+nav p{
+	font-family: "Lobster", "Palatino", cursive, serif;
+	margin-bottom: 0;
+}
+nav a:link, nav a:visited {
+    background-color: #E56782;
+	border-radius: 5px;
+    color: white;
+	margin: 5px;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav a:hover, a:active {
+    background-color: #E59A90;
+}
+section{
+	margin-right: 20px;
+	width:80%;
+	float: left;
+}
+
+.prev{
+	font-size: 300%;
+	text-decoration: none;
+	font-family: "Lobster", "Palatino", cursive, serif;
+	float: left;
+}
+
+.next{
+	font-size: 300%;
+	text-decoration: none;
+	font-family: "Lobster", "Palatino", cursive, serif;
+	float: right;
+}
+
+#large{
+	font-size: 150%;
+	font-stretch: expanded;
+}
+
+.riddle{
+	margin-top: 0;
+	margin-bottom: 0;
+}
